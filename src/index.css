@@ -1,0 +1,209 @@
+body {
+  background-color: hsl(0, 0%, 10%);
+  transition: background-color 0.3s ease;
+}
+
+.to-do-list {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+/* Title */
+h1 {
+  font-size: 4rem;
+  color: orange;
+}
+
+/* Buttons */
+button {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: orange;
+  transition: background-color 0.5s ease;
+}
+
+button:hover {
+  background-color: darkorange;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Search prompt */
+.search-label {
+  font-size: 1.6rem;
+  color: white;
+  margin-right: 10px;
+}
+
+/* Search Bar */
+input[type="text"] {
+  font-size: 1.6rem;
+  padding: 10px;
+  border: 2px solid hsla(0, 0%, 80%, 0.5);
+  border-radius: 5px;
+  width: 250px; 
+}
+
+/* Create Task Bar */
+input[type="text"].create-task {
+  font-size: 1.6rem;
+  padding: 10px;
+  border: 2px solid hsla(0, 0%, 80%, 0.5);
+  border-radius: 5px;
+  width: 250px;
+}
+
+
+input[type="text"], input[type="text"].create-task {
+  color: black; 
+}
+
+/* Search Button */
+button.search-button {
+  font-size: 1.6rem;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: orange;
+  margin-left: 10px; 
+}
+
+button.search-button:hover {
+  background-color: darkorange;
+}
+
+/* Task List */
+ol {
+  padding: 0;
+}
+
+li {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px;
+  background-color: hsla(0, 0%, 97%);
+  margin-bottom: 10px;
+  border: 3px solid hsla(0, 0%, 85%, 0.75);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+}
+
+/* Completed Tasks */
+.completed .text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Light Mode Style */
+body.light-mode {
+  background-color: hsl(0, 0%, 90%);
+}
+
+body.light-mode h1 {
+  color: orange;
+}
+
+body.light-mode li {
+  background-color: hsla(0, 0%, 85%);
+  border-color: hsla(0, 0%, 75%, 0.75);
+}
+
+body.light-mode .text {
+  color: black;
+}
+/* Keep text black in light mode */
+body.light-mode input[type="text"], 
+body.light-mode input[type="text"].create-task {
+  color: black; 
+}
+
+body.light-mode button {
+  background-color: orange;
+}
+
+body.light-mode button:hover {
+  background-color: darkorange;
+}
+
+/* Dark Mode Style */
+body.dark-mode {
+  background-color: hsl(0, 0%, 10%);
+}
+
+body.dark-mode h1 {
+  color: white;
+}
+
+body.dark-mode li {
+  background-color: hsla(0, 0%, 20%);
+  border-color: hsla(0, 0%, 25%, 0.75);
+}
+
+body.dark-mode .text {
+  color: white;
+}
+
+body.dark-mode input[type="text"], 
+body.dark-mode input[type="text"].create-task {
+  color: black; /* Ensure text is black in dark mode */
+}
+
+body.dark-mode button {
+  background-color: orange;
+}
+
+body.dark-mode button:hover {
+  background-color: darkorange;
+}
+
+/* Button for light/dark mode */
+button.toggle-mode {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  background-color: orange;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+button.toggle-mode:hover {
+  background-color: darkorange;
+}
+
+button.toggle-mode i {
+  margin-left: 10px; 
+}
+
+@media screen and (max-width: 768px) {
+  input[type="text"], input[type="text"].create-task {
+    width: 80%; 
+  }
+}
